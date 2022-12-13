@@ -1,0 +1,92 @@
+@import './NewsNav/_news-nav.scss';
+
+.news {
+	&-header {
+		padding-top: 120px;
+		padding-bottom: 70px;
+		@include width(center);
+		@include widthXS();
+	
+		&-title {			
+			text-transform: uppercase;
+		}
+	}
+	
+	&-nav-wrapper {
+		@include width(center);
+		@include widthXS(center);
+		margin-top: 40px;
+		
+		@include responsive(xs) {
+			margin-top: 20px;
+		}
+	}
+	
+	&-articles {
+		@include width(center);
+		@include widthXS(center);
+		
+		&-item {
+			@include flex();
+			justify-content: space-between;
+			align-items: flex-start;
+			margin-bottom: 35px;
+			
+			@include responsive(xs) {
+				flex-wrap: wrap;
+			}
+			
+			&-left {
+				margin-right: 20px;
+				
+				@include responsive(xs) {
+					margin-right: 0;
+				}
+			
+				&-image {
+					object-fit: cover;
+					width: 100%;
+					height: 100%;
+				}
+			}
+			
+			&-right {
+				flex-grow: 1;
+				margin-top: 10px;
+				
+				&-title {
+					@include font(18, 600, 24);
+				}
+				
+				&-date {
+					color: $color-grey_light;
+					margin-top: 5px;
+					@include font(14, 400, 21);
+				}
+				
+				&-text {
+					margin-top: 15px;
+					@include font(15, 400, 20);
+				}
+				
+				&-button {
+					margin-top: 20px;
+					float: right;
+				}
+			}
+		}
+		
+		&-button {
+			text-align: center;
+		}
+	}
+	
+	&-advertisement {
+		@include width(center);
+		@include widthXS(center);
+		
+		@include responsive(xs) {
+			// margin-top: 40px;
+		}
+	}
+}

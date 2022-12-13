@@ -1,0 +1,42 @@
+.header-navigation {
+	&-items {
+		@include flex();
+		flex-wrap: wrap;
+		margin: -10px;
+	}
+	
+	&-item {
+		margin: 10px;
+		
+		& button {
+			color: $color-white;
+			background-color: inherit;
+			border: none;
+			@include font(14, 600, 19);
+			text-transform: uppercase;
+			cursor: pointer;
+		}
+		
+		// Items
+		li.szh-menu__item {
+			display: block;
+			@include font(14, 600, 19);
+			
+			&::first-letter {
+				text-transform: capitalize;
+			}
+		}
+		
+		// Sub items
+		ul.szh-menu > li.szh-menu__item::first-letter {
+			text-transform: capitalize;
+		}
+		
+		// Items without sub items
+		&-empty {
+			ul.szh-menu {
+				display: none;
+			}
+		}
+	}
+}

@@ -1,0 +1,27 @@
+.pattern {
+	@include flex();
+	justify-content: space-between;
+	align-items: flex-start;
+	@include width(center);
+	padding: 120px 0 70px 0;
+	@include widthXS(center);
+	
+	@include responsive(md) {
+		flex-direction: column;
+	}
+	
+	&-inner {
+	}
+	
+	&-left {
+		@include navSecond-left();
+	}
+	
+	&-right {
+		flex-grow: 1;
+		
+		&-title {
+			text-transform: uppercase;
+		}
+	}
+}

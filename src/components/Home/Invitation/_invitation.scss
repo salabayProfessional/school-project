@@ -1,0 +1,71 @@
+.invitation {	
+	background-color: $color-grey;	
+	padding: 120px 0;
+	
+	@include responsive(md) {
+		padding: 0;
+	}
+	
+	&-inner {
+		position: relative;
+		@include width(center);
+		height: 440px;
+		
+		@include responsive(md) {
+			width: 100%;
+		}
+		
+		@include responsive(md) {
+			height: 300px;
+		}
+	}
+	
+	&-image {
+		object-fit: cover;
+		width: 100%;
+		height: 100%;
+	}
+	
+	&-block {
+		position: absolute;
+		background-color: $color-blue;
+		opacity: 0.7;
+		width: 510px;
+		height: 100%;
+		left: 50px;
+		top: 0;
+		
+		@include responsive(md) {
+			width: 100%;
+			left: 0;
+		}
+	}
+	
+	&-title {
+		position: absolute;
+		color: $color-white;
+		left: 100px;
+		top: 80px;
+		width: 440px;
+		heigh: 110px;
+		text-align: left;
+		
+		@include responsive(md) {
+			left: 10px;
+			width: calc(100% - 20px);
+			text-align: center;
+		}
+	}
+	
+	&-button {
+		position: absolute;
+		right: 90px;
+		bottom: 70px;
+		
+		@include responsive(md) {
+			right: inherit;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+}

@@ -1,0 +1,28 @@
+.partners {
+	background-color: $color-grey;
+	padding: 120px 0;
+	
+	&-inner {		
+		@include width(center);
+	}
+	
+	&-title {
+		text-transform: uppercase;
+	}
+	
+	&-items {
+		@include flex();
+		flex-wrap: wrap;
+		margin: -20px;
+		margin-top: 60px;
+	}
+	
+	&-item {
+		margin: 20px;
+		
+		& > img {
+			height: auto;
+			width: 110px;
+		}
+	}
+}

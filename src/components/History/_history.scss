@@ -1,0 +1,71 @@
+.history {
+	&-header {
+		position: relative;		
+		@include flex();
+		height: 370px;
+		
+		&-image {
+			position: absolute;
+			object-fit: cover;
+			width: 100%;
+			height: 100%;
+			z-index: -1;
+		}
+		
+		&-title {
+			color: $color-white;
+			text-transform: uppercase;			
+			@include widthXS(center);
+		}
+	}
+	
+	&-right {
+		&-articles {	
+			@include responsive(xs) {
+				padding-top: 60px;			
+			}
+
+			&-items {
+				margin-top: -30px;
+			}
+			
+			&-item {
+				margin-top: 30px;
+			
+				&-title {				
+					text-transform: uppercase;
+					text-align: left;
+				}
+			
+				&-text {
+					margin-top: 20px;
+					@include font(18, 400, 25);
+				}
+			}
+			
+		}
+	}
+	
+	&-pictures {
+		@include width(center);
+		padding-bottom: 120px;
+		
+		@include responsive(xs) {
+			padding-bottom: 60px;			
+		}
+		
+		& > .carousel-root > .carousel-slider div.slider-wrapper {			
+			& img {
+				object-fit: contain;
+				width: 100%;
+				height: 300px;
+			}
+		}
+		
+		& > .carousel-root > .carousel > .thumbs-wrapper ul li img {
+			object-fit: cover;			
+			height: 70px;
+			color: red;
+		}
+	}
+}

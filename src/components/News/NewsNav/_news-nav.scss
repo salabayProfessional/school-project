@@ -1,0 +1,16 @@
+.news-nav {
+	background-color: $color-grey;
+	padding: 20px;
+
+	&-item {		
+		margin-right: 20px;
+		@include font(15, 700, 20);
+		text-transform: uppercase;
+		cursor: pointer;
+		
+		&:hover {
+			color: $color-orange;
+			transition: all 0.4s;
+		}
+	}
+}

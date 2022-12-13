@@ -1,0 +1,67 @@
+@import './Navigation/_navigation.scss';
+
+.header-bottom {
+	color: $color-white;
+	background-color: $color-blue;
+	padding: 20px;
+	
+	&-small {
+		padding: 0;
+		padding-bottom: 10px;
+		border-bottom: $color-white 1px solid;
+
+		& nav > ul.header-navigation-items {
+			margin: 0;
+			padding-top: 10px;
+		}
+	}
+	
+	&-title {
+		text-align: center;
+		
+		&-small {
+			display: none;
+		}
+	}
+	
+	&-subtitle {
+		margin-top: 10px;
+		text-align: center;
+		
+		&-small {
+			display: none;
+		}
+	}
+	
+	&-nav {
+		margin-top: 20px;
+	}
+	
+	
+	&-gamburger {	
+		display: none;
+		position: absolute;
+		border: 1px solid;
+		border-radius: 4px;
+		width: 40px;
+		height: 40px;
+		padding: 4px;
+		padding-top: 0;
+		left: 0;		
+		cursor: pointer;
+		
+		&-line {
+			border-top: 4px solid;
+			margin-top: 8px;
+		}
+		
+		@include responsive(md) {
+			display: block;
+			top: -90px;
+		}
+			
+		@include responsive(xs) {
+			top: -33px;
+		}
+	}
+}

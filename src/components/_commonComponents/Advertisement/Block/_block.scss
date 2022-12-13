@@ -1,0 +1,10 @@
+.advertisement-block {
+	&-items {		
+		margin-top: -30px;
+	}
+	
+	&-item {
+		@include font(15, 400, 20);
+		margin-top: 30px;
+	}
+}

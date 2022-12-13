@@ -1,0 +1,9 @@
+@import './Top/_top.scss';
+@import './Bottom/_bottom.scss';
+
+.header {
+	background-color: $color-white;
+	position: sticky;
+	top: 0;
+	z-index: 10;
+}

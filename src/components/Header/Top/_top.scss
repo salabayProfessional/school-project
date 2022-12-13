@@ -1,0 +1,38 @@
+.header-top {
+	@include flex();
+	flex-wrap: wrap;
+	justify-content: space-between;
+	@include width(center);
+	max-width: 700px;
+	padding: 0 20px;
+	
+	&-small {
+		transform: scale(0.8, 0.8);
+		max-height: 80px;
+		padding: 0;
+	}
+	
+	&-phone {
+		@include flex();
+		margin: 20px 10px 20px 0;
+		margin-right: 80px;
+		
+		& > img {
+			width: 14px;
+			height: auto;
+		}
+		
+		& > span {
+			@include font(14, 400, 19);
+			margin-left: 10px;
+		}
+	}
+	
+	&-networks {
+		margin: 20px 80px 20px 0;
+	}
+	
+	&-languages {
+		@include font(14, 400, 19);
+	}
+}

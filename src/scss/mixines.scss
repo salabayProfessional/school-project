@@ -1,0 +1,103 @@
+// Flex ---------------------------------------------
+@mixin flex($props: 'row') {
+	display: flex;
+	@if $props == 'column' {
+		flex-direction: column;
+	} @else {
+		flex-direction: row;
+	}
+	justify-content: center;
+	align-items: center;
+}
+
+// Layout -----------------------------------------
+@mixin width($props: 'inherit') {
+	@if $props == center {
+		width: 80%;
+		margin: 0 auto;
+	}
+	max-width: 2000px;
+}
+
+// Layout for smallest size -----------------------------------------
+@mixin widthXS($props: '') {
+	@media screen and (max-width: 768px) {
+		@if $props == center {
+			width: 100%;
+			margin: 0;
+			padding: 0 20px;
+			box-sizing: border-box;		
+		} @else {
+			width: calc(100% - 40px);
+		}	
+	}
+}
+
+// Font ---------------------------------------------
+@mixin font($size, $weight, $line-height) {	
+	@if $weight == 300 {
+		font-family: OpenSansLight;		
+	} @else if $weight == 400 {
+		font-family: OpenSansLight;
+	} @else if $weight == 600 {
+		font-family: OpenSansSemiBold;
+	} @else if $weight == 700 {
+		font-family: OpenSansBold;
+	} @else if {
+		@error "MIXINES. FONT. Font weight is wrong. Available parameters: 300";
+	}
+	
+	font-size: $size + px;
+	font-size: $size / $font-size-root + rem;
+	
+	line-height: $line-height + px;
+}
+
+// Font size px to rem ---------------------------------------
+@function fontSize($size) {
+	@return $size / $font-size-root + rem;
+}
+
+// Responsive -----------------------------------------------------
+@mixin responsive($type) {
+	@if $type == 'xs' {
+		@media screen and (max-width: 768px) {
+			@content;
+		}
+	} @else if $type == 'sm' {
+		@media screen and (max-width: 992px) {
+			@content;
+		}
+	} @else if $type == 'md' {
+		@media screen and (max-width: 1200px) {
+			@content;
+		}
+	} @else if $type == 'lg' {
+		@media screen and (min-width: 1200px) {
+			@content;
+		}
+	}
+}
+
+// Components with 'NavSecond' ---------------------------------------------------
+@mixin navSecond-inner() {
+	@include flex();
+	justify-content: space-between;
+	align-items: flex-start;
+	@include width(center);
+	padding: 120px 0 70px 0;
+	@include widthXS(center);
+	margin-left: 30px;
+	
+	@include responsive(md) {
+		flex-direction: column;
+	}
+}
+
+@mixin navSecond-left() {
+	margin-right: 30px;
+		
+	@include responsive(md) {		
+		margin-right: 0;
+	}
+}

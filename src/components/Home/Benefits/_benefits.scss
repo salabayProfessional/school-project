@@ -1,0 +1,31 @@
+.benefits {
+	@include width(center) ;
+	padding: 100px 0;
+	
+	&-items {
+		@include flex();
+		margin: -20px;
+		flex-wrap: wrap;
+	}
+	
+	&-item {
+		width: 250px;
+		height: 150px;
+		margin: 20px;
+		
+		&-top {
+			@include flex();
+			height: calc(100% - 50px);
+			
+			& > img {
+				
+			}
+		}
+		
+		&-bottom {
+			height: 50px;
+			@include font(20, 600, 27);
+			text-align: center;
+		}
+	}
+}

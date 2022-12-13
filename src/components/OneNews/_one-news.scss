@@ -1,0 +1,49 @@
+.one-news {
+	@include width(center);
+	@include widthXS();
+	padding-top: 120px;
+	
+	@include responsive(xs) {
+		padding: 60px 0;
+	}
+	
+	&-header {		
+		&-image {
+			width: auto;
+			height: 260px;
+		}
+	}
+	
+	&-article {
+		margin-top: 30px;
+		text-transform: uppercase;
+		
+		&-title {
+			text-align: left;
+		}
+		
+		&-date {
+			color: $color-grey_light;
+			@include font(18, 400, 24);
+			margin-top: 10px;
+		}
+		
+		&-text {
+			margin-top: 30px;
+			@include font(15, 400, 20);
+		}
+	}
+	
+	&-pictures {
+		&-items {
+			@include flex();
+			flex-wrap: wrap;
+			margin-top: 50px;
+			margin-bottom: -20px;
+		}
+		
+		&-item {
+			margin: 20px;
+		}
+	}
+}

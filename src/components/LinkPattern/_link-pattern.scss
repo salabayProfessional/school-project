@@ -1,0 +1,22 @@
+.link-pattern {
+	&-title {
+		text-transform: uppercase;			
+		@include widthXS(center);
+		margin-top: 60px;
+		padding-top: 40px !important;
+	}
+
+	&-inner {
+		@include navSecond-inner();
+	}
+	
+	&-left {
+		@include navSecond-left();
+	}
+	
+	&-right {
+		text-align: center;
+		@include font(40, 400, 80);
+		padding: 40px;
+	}
+}

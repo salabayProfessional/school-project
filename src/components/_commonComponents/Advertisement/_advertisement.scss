@@ -1,0 +1,68 @@
+@import './Block/_block.scss';
+
+.advertisement {
+	padding: 120px 0;
+	
+	@include responsive(xs) {
+		padding: 70px 0;
+	}
+
+	&-header {
+		&-title {
+			text-transform: uppercase;
+		}
+	}
+	
+	&-articles-single {
+		margin-top: 70px;
+		
+		@include responsive(xs) {
+			margin-top: 35px;
+		}
+	}
+	
+	&-articles {		
+		margin-top: 70px;
+		
+		@include responsive(xs) {
+			margin-top: 35px;
+		}
+		
+		&-inner {
+			@include flex();
+			align-items: flex-start;
+			
+			@include responsive(xs) {
+				@include flex(column);
+			}
+		}
+		
+		&-block-wrapper {
+			&-left, &-right {
+				width: 50%;
+				padding-top: 30px;			
+				
+				@include responsive(xs) {
+					width: 100%;
+					padding: 0 !important;
+				}
+			}
+		
+			&-left {
+				padding-right: 30px;
+			}
+			
+			&-right {
+				padding-left: 30px;
+				border-left: 1px solid $color-grey;
+				padding-bottom: 30px;
+			}
+		}
+	}
+	
+	&-button {
+		@include flex();
+		justify-content: flex-end;
+		margin-top: 40px;		
+	}
+}

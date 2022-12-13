@@ -1,0 +1,21 @@
+@import './variable.scss';
+@import './fonts.scss';
+@import './mixines.scss';
+@import './_style.scss';
+@import '../components/_commonComponents/_index.scss';
+
+@import '../components/Home/_home.scss';
+@import '../components/Header/_header.scss';
+@import '../components/Footer/_footer.scss';
+@import '../components/IntroductoryCompaign/_intro-compaign.scss';
+@import '../components/History/_history.scss';
+@import '../components/News/_news.scss';
+@import '../components/OneNews/_one-news.scss';
+@import '../components/Team/_team.scss';
+@import '../components/Team/TeamPattern/_team-pattern.scss';
+@import '../components/Specialties/_specialties.scss';
+@import '../components/LinkPattern/_link-pattern.scss';
+@import '../components/Appliciants/_index.scss';
+
+// TO DO:
+// - Contacts section fix

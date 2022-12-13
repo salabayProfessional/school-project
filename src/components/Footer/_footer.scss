@@ -1,0 +1,82 @@
+@import 'Map/_map.scss';
+
+.footer {
+	background-color: $color-blue;
+	
+	&-inner {
+		@include width(center);
+		padding: 45px 0 75px 0;
+	}
+	
+	&-top {
+		padding-bottom: 45px;		
+		
+		&-items {
+			@include flex();
+			flex-wrap: wrap;
+			margin: -20px;
+		}
+		
+		&-item {
+			margin: 20px;
+		
+			& > img {
+				width: auto;
+				height: 45px;
+			}
+		}
+	}
+	
+	&-line {
+		border-bottom: 1px solid $color-white;
+		opacity: 0.1;
+	}
+	
+	&-bottom {
+		color: $color-white;
+		@include flex();
+		justify-content: space-between;
+		flex-wrap: wrap;
+		padding-top: 30px;
+		
+		&-item {
+			margin: 20px;
+			
+			&-title {
+				text-transform: uppercase;
+				@include font(15, 600, 20);
+			}
+			
+			&-phone-1,
+			&-phone-2,
+			&-mail {
+				@include font(15, 400, 33);
+			}
+			
+			&-location-1,
+			&-location-2 {
+				@include font(15, 400, 24);
+			}
+			
+			&-networks img {				
+				margin-top: 20px;
+			}
+			
+			&-button {
+				position: relative;
+				right: 0;
+			}
+			
+			&-message {
+				max-width: 300px;
+				margin-top: 30px;
+				@include font(14, 400, 21);
+			}
+		}
+	}
+	
+	&-bottom-item.button {
+		@include flex(column);
+		align-items: flex-end;
+	}
+}
